@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+  </button><br>
+  <form action = "registration" method= "POST" action="{% url 'registration' %}">
+    {% csrf_token %}
+    {{form.as_p}}
+  
+  
+  <div class="card container">
+    <div class="container-fluid">
+      <label for = "email" class="email", name="Email">Email</label>
+      <input type= "text" id="Username" class="form-control">
+    </div>
+  <div class="container-fluid">
+    <label for = "Username" class="Username" name = "Username">Username</label>
+    <input type= "text" id="Username" class="form-control">
+  </div>
+
+  <div class = "container-fluid mx-auto">
+
+  <label for ="inputPassword4" class = "form-label", name = "Password">Password</label>
+  <input type="password" id="inputPassword4" class="form-control" aria-labelledby="passwordHelpBlock">
+  <div id="passwordHelpBlock" class="form-text">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  </div>
+
+
+  <div class="d-grid gap-2 col-6 mx-auto container-fluid">
+    <button class="btn btn-primary " type="submit">Sign up</button>
+
+  <div class="justify-left">
+  <a href="login.html">Already a user, login</a>
+  </form>
+
+</form>
+
+  </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>
