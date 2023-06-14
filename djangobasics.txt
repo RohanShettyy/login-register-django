@@ -1,0 +1,13 @@
+how to create a new django project
+
+create a virtual environment first using- py -m venv virtualenvironmentname(venv for eg. )
+activate virtual environment- venv\Scripts\Activate
+this will activate the virtual env and now we can actually install django in it using - pip install django
+now we have to start a new project with - django-admin startproject [projectname] .(this dot is useful because it puts everything in one
+folder and we wont have to do anything to it)
+now we can add apps to it by - py manage.py startapp [appname]
+
+
+Now to create superuser, first we have to migrate, to do that- py manage.py makemigrations
+then - py manage.py migrate
+now you can  successfully use admin and create superuser
