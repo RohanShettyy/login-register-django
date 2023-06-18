@@ -14,6 +14,7 @@
     height: 100%;
     width: 260px;
     background: #11101d;
+    
 
 }
 
@@ -24,16 +25,38 @@
     align-items: center;
 }
 
+.sidebar .logo-details .bxl-meta{
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    
+}
+
 .sidebar .logo-details .logo_name{
     font-size: 22px;
     color: #fff;
     font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+    
+}
+
+.sidebar.close .logo-details .logo_name{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sidebar .nav-links{
     height : 100%;
-    padding-top: 30px;
-    
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+    display:none;
 }
 
 .sidebar .nav-links li{
@@ -53,6 +76,12 @@
     line-height: 50px;
     color: #fff;
     font-size: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+    transform: rotate(-180deg);
 }
 
 .sidebar .nav-links li a{
@@ -77,8 +106,12 @@
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
     background: #1d1b31;
-    
+    display: none;
 }
+
+.sidebar .nav-links li.showMenu .sub-menu{
+    display: block;
+} 
 
 .sidebar .nav-links li .sub-menu a{
     color: #fff;
@@ -116,10 +149,51 @@
 }
 
 .sidebar.close .nav-links li .sub-menu .link_name{
+  display: none;  
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name{
     font-size: 18px;
     opacity: 1;
     display: block;
 }
 
+.sidebar.close .nav-links i.arrow{
+    display: none;
+}
 
+
+.home-section{
+    position: relative;
+    background: #fff;
+    
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px + 78px);
+    transition: all 0.4s ease;
+}
+
+.sidebar.close ~ .home-section{
+    position: relative;
+    left: 78px;
+    width: calc(100% -260px + 78px);
+    background: #fff;
+    height: 100vh;
+}
+
+.home-section  .home-content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.home-section .home-content .bx-menu,
+.home-section  .home-content .text{
+    color: #11101d;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.home-section .home-content .bx-menu{
+    margin: 0 15px;
+}
 

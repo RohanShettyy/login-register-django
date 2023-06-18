@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Drop Down Sidebar</title>
+    <title>Sidebar</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
 </head>
 
 <body>
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-details">
-
-            <span class="logo_name">Logo</span>
+            <i class='bx bxl-meta'></i>
+            <span class="logo_name">Sidebar</span>
 
         </div>
         <ul class="nav-links">
@@ -99,6 +100,13 @@
 
             <li>
                 <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class = "link_name">Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Logout</span>
                 </a>
@@ -107,6 +115,34 @@
 
         </ul>
     </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Sidebar</span>
+
+        </div>
+    </section> 
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow)
+        for(var i = 0; i < arrow.length; i++)
+        {
+            arrow[i].addEventListener("click", (e)=>{
+               
+                let arrowParent = e.target.parentElement.parentElement;
+                console.log(arrowParent);
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarbtn = document.querySelector(".bx-menu");
+        console.log(sidebarbtn);
+        sidebarbtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
 </body>
 
 </html>
