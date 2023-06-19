@@ -173,7 +173,8 @@
     transition: all 0.4s ease;
 }
 
-.sidebar.close ~ .home-section{
+
+.sidebar.close ~ .home-section {
     position: relative;
     left: 78px;
     width: calc(100% -260px + 78px);
@@ -197,3 +198,9 @@
     margin: 0 15px;
 }
 
+.home-section .home-content .column {
+    margin-left: 79%;
+    font-weight: 300;
+    font-size: 17px;
+    width: calc(100% -260px + 78px);
+}
